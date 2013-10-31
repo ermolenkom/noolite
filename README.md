@@ -1,4 +1,4 @@
-noolite
+#noolite
 =======
 This project is written in C for woriking with NooLite USB stick (PC118, PC1116, PC1132, RX1164) for linux.
 
@@ -23,7 +23,7 @@ Site: https://github.com/ermolenkom/noolite
   написаны отдельные драйвера для RX1164 на прием и передачу
   
   
-Инструкция.
+##Инструкция.
 
 Устанавливаем библиотеку libusb (нужна для работы с HID-устройством)
 
@@ -41,7 +41,7 @@ Site: https://github.com/ermolenkom/noolite
 Для ОТПРАВКИ команд выключателям через USB адаптер (PC118, PC1116, PC1132)
 
 
-Компиляция, копирование, назначение прав:
+###Компиляция, копирование, назначение прав:
 
   `sudo gcc nooletepc.c -o noolitepc -lusb-1.0`
   
@@ -52,7 +52,7 @@ Site: https://github.com/ermolenkom/noolite
   `sudo chmod a+s /usr/local/bin/noolitepc`
   
 
-Использование:
+###Использование:
 
   `/usr/local/bin/noolitepc -api -set_ch 1 33`
   
@@ -137,13 +137,13 @@ Using /usr/local/bin/noolitepc -api -<command> <channel> [<level>|<RGB>]
   
   `sudo chmod a+s /usr/local/bin/nooliterx`
   
-Использование:
+###Использование:
 
 запустить 
 
   `/usr/local/bin/nooliterx`
 
-Применение в системе MajorDoMo:
+###Применение в системе MajorDoMo:
 
 необходимо создать скрипт(сценарий) switchNooLitePress
 
@@ -170,7 +170,7 @@ foreach($objects as $obj){
 Далее он перебирает пульты (они введены как объекты класса switchNooLite) и запускает метод refresh нужной кнопки, 
 с передачей параметров.
 
-Применение в другой системе "Умный Дом":
+###Применение в другой системе "Умный Дом":
 
 При получении нажатия драйвер запрашивает веб-страницу на локальном сервере. Необходимо заменить строчку
 
