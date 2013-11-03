@@ -31,11 +31,11 @@ Site: https://github.com/ermolenkom/noolite
   
 Скачиваем  
 
-  `wget https://github.com/ermolenkom/noolite/archive/noolite-master.tar.gz`
+  `wget https://github.com/ermolenkom/noolite/archive/noolite-master.zip`
   
 Разархивируем  
 
-  `tar xvfz noolite-master.tar.gz`
+  `tar xvfz noolite-master.zip`
 
 
 Для ОТПРАВКИ команд выключателям через USB адаптер (PC118, PC1116, PC1132)
@@ -43,7 +43,7 @@ Site: https://github.com/ermolenkom/noolite
 
 ###Компиляция, копирование, назначение прав:
 
-  `sudo gcc nooletepc.c -o noolitepc -lusb-1.0`
+  `sudo gcc noolitepc.c -o noolitepc -lusb-1.0`
   
   `sudo cp noolitepc /usr/local/bin/noolitepc`
   
@@ -129,7 +129,7 @@ Using /usr/local/bin/noolitepc -api -<command> <channel> [<level>|<RGB>]
 
 Компиляция, копирование, назначение прав:
 
-  `sudo gcc nooleterx.c -o nooliterx -lusb-1.0`
+  `sudo gcc nooliterx.c -o nooliterx -lusb-1.0`
   
   `sudo cp nooliterx /usr/local/bin/nooliterx`
   
