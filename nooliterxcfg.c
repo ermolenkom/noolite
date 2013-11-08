@@ -71,11 +71,13 @@ int main(int argc, char * argv[])
         if (argc >= 3) {
                 if (strcmp (argv[2],"-norm_ch")==0) //0-нормальная работа
                 {
-                        COMMAND_ACTION[0] = 1;
+                        //COMMAND_ACTION[0] = 1; // перепутаны биты управления
+                        COMMAND_ACTION[0] = 2;
                 }
                 else if (strcmp(argv[2],"-bind_ch")==0) //1-включить привязку на адрес ячейки, 30 секунд
                 {
-                        COMMAND_ACTION[0] = 2;
+                        //COMMAND_ACTION[0] = 2; // перепутаны биты управления // Нашел {mixa}
+                        COMMAND_ACTION[0] = 1;
                 }
                 else if (strcmp(argv[2],"-unbind_ch")==0) //2- выключить привязку принудительно
                 {
