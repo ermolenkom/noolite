@@ -43,18 +43,25 @@ Site: https://github.com/ermolenkom/noolite
 
 ###Компиляция, копирование, назначение прав:
 
-  `sudo gcc noolitepc.c -o noolitepc -lusb-1.0`
-  
-  `sudo cp noolitepc /usr/local/bin/noolitepc`
-  
-  `sudo chown root /usr/local/bin/noolitepc`
-  
-  `sudo chmod a+s /usr/local/bin/noolitepc`
+  `make clean && make`
+
+  `sudo cp noolitepc /usr/bin`
+
+  `sudo cp nooliterx /usr/bin`
+
+  `sudo cp nooliterxcfg /usr/bin`
+
+  `sudo chown root /usr/bin/noolitepc`
+
+  `sudo chown root /usr/bin/nooliterx`
+
+  `sudo chown root /usr/bin/nooliterxcfg`
+
   
 
 ###Использование:
 
-  `/usr/local/bin/noolitepc -api -set_ch 1 33`
+  `noolitepc -api -set_ch 1 33`
   
 эта команда устанавливает на 1-м канале уровень в 33%
 
@@ -68,25 +75,25 @@ Site: https://github.com/ermolenkom/noolite
 
 Привязка устройства к 1-му каналу:
 
-  `/usr/local/bin/noolitepc -api -bind_ср 1`
+  `noolitepc -api -bind_ср 1`
   
 Включение устройств 1-ого канала:
 
-  `/usr/local/bin/noolitepc -api -on_ch 1`
+  `noolitepc -api -on_ch 1`
   
 Выключение на 2 канал:
 
-  `/usr/local/bin/noolitepc -api -off_ch 2`
+  `noolitepc -api -off_ch 2`
   
 Управление RGB контроллером (лиловый цвет):
 
-  `/usr/local/bin/noolitepc -api -set_color_ch 110 0 255`
+  `noolitepc -api -set_color_ch 110 0 255`
 
 Помощь, по команде:
 
-`/usr/local/bin/noolitepc -help
+`noolitepc -help
 
-Using /usr/local/bin/noolitepc -api -<command> <channel> [<level>|<RGB>]
+Using noolitepc -api -<command> <channel> [<level>|<RGB>]
 
   <command> may be:
     
@@ -127,21 +134,11 @@ Using /usr/local/bin/noolitepc -api -<command> <channel> [<level>|<RGB>]
 
 Для чтения нажатия клавиш USB адаптер RX1164
 
-Компиляция, копирование, назначение прав:
-
-  `sudo gcc nooliterx.c -o nooliterx -lusb-1.0`
-  
-  `sudo cp nooliterx /usr/local/bin/nooliterx`
-  
-  `sudo chown root /usr/local/bin/nooliterx`
-  
-  `sudo chmod a+s /usr/local/bin/nooliterx`
-  
 ###Использование:
 
 запустить 
 
-  `/usr/local/bin/nooliterx`
+  `nooliterx`
 
 ###Применение в системе MajorDoMo:
 
