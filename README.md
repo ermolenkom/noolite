@@ -140,14 +140,14 @@ Using noolitepc -api -<command> <channel> [<level>|<RGB>]
 
   `nooliterx`
   
-Для автоматического запуска в Ubuntu на уровнях 2,3,4,5
+Для автоматического запуска в Ubuntu на уровнях 2,3,4,5 в режиме демона
 
    `sudo cp majordomo_nooliterx.conf /etc/init`
    
 Ручной запуск
- 'start majordomo_nooliterx'
+ `start majordomo_nooliterx`
 Ручной останов
- 'stop majordomo_nooliterx'
+ `stop majordomo_nooliterx`
 
 ###Применение в системе MajorDoMo:
 
