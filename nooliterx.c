@@ -88,12 +88,12 @@ if (togl!=buf[0]){
   
   togl = buf[0];
 
-  sprintf(commandtxt, "wget http://localhost/objects/?script=switchNooLitePress\\&buf0=%i\\&buf1=%i\\&buf2=%i\\&buf3=%i\\&buf4=%i\\&buf5=%i\\&buf6=%i\\&buf7=%i -O /dev/null",buf[0],buf[1],buf[2],buf[3],buf[4],buf[5],buf[6],buf[7]);
-
+//  sprintf(commandtxt, "wget http://localhost/objects/?script=switchNooLitePress\\&buf0=%i\\&buf1=%i\\&buf2=%i\\&buf3=%i\\&buf4=%i\\&buf5=%i\\&buf6=%i\\&buf7=%i -O /dev/null",buf[0],buf[1],buf[2],buf[3],buf[4],buf[5],buf[6],buf[7]);
+  sprintf(commandtxt, "timeout 120 wget -q -T 10  http://localhost/objects/?script=switchNooLitePress\\&buf0=%i\\&buf1=%i\\&buf2=%i\\&buf3=%i\\&buf4=%i\\&buf5=%i\\&buf6=%i\\&buf7=%i -O /dev/null &",buf[0],buf[1],buf[2],buf[3],buf[4],buf[5],buf[6],buf[7]);
   system(commandtxt);
   printf("comm:%s\n", commandtxt);
 }
-
+usleep(150000);
 
       scanf("%c",i);
 
