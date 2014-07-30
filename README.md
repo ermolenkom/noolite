@@ -75,7 +75,7 @@ Site: https://github.com/ermolenkom/noolite
 
 Привязка устройства к 1-му каналу:
 
-  `noolitepc -api -bind_ср 1`
+  `noolitepc -api -bind_ch 1`
   
 Включение устройств 1-ого канала:
 
